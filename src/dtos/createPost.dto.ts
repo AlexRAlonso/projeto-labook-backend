@@ -7,7 +7,7 @@ export interface CreatePostInputDTO {
 
 export const CreatePostSchema = z
   .object({
-    creator_id: z.string().startsWith("u"),
+    creator_id: z.string(),
     content: z.string().max(500),
   })
   .transform((data) => data as CreatePostInputDTO);

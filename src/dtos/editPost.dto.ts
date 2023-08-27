@@ -7,7 +7,7 @@ export interface EditPostInputDTO {
 
 export const EditPostSchema = z
   .object({
-    id: z.string().startsWith("p"),
+    id: z.string(),
     content: z.string().max(500).optional(),
   })
   .transform((data) => data as EditPostInputDTO);

@@ -29,10 +29,10 @@ CREATE TABLE likes_dislikes (
 
 INSERT INTO users (id, name, email, password, role)
 VALUES
-("u001", "Augustus", "augustus@email.com", "aug123", "default"),
-("u002", "Tiberius", "tiberius@email.com", "tib123", "default"),
-("u003", "Caligula", "gaius@email.com", "gai123", "default"),
-("u004", "Claudius", "claudius@email.com", "cla123", "default");
+("u001", "Augustus", "augustus@email.com", "aug123", "NORMAL"),
+("u002", "Tiberius", "tiberius@email.com", "tib123", "NORMAL"),
+("u003", "Caligula", "gaius@email.com", "gai123", "NORMAL"),
+("u004", "Claudius", "claudius@email.com", "cla123", "NORMAL");
 
 INSERT INTO posts (id, creator_id, content, likes, dislikes)
 VALUES
@@ -41,3 +41,6 @@ VALUES
 ("p003", "u003", "Do neither good nor ill to the man whom I have sent you", "10", "12"),
 ("p004", "u004", "To do no evil is good, to intend none is better.", "20", "5");
 
+drop table users;
+
+drop table posts;

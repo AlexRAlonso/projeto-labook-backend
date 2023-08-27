@@ -6,6 +6,6 @@ export interface DeletePostInputDTO {
 
 export const DeletePostSchema = z
   .object({
-    id: z.string().startsWith("p"),
+    id: z.string()
   })
   .transform((data) => data as DeletePostInputDTO);
