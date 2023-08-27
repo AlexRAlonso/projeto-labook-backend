@@ -10,7 +10,7 @@ CREATE TABLE users (
 
 CREATE TABLE posts (
     id TEXT NOT NULL PRIMARY KEY UNIQUE,
-    creator_id TEXT NOT NULL UNIQUE,
+    creator_id TEXT NOT NULL,
     content TEXT NOT NULL,
     likes INTEGER,
     dislikes INTEGER,

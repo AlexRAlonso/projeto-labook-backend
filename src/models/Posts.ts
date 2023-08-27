@@ -8,6 +8,18 @@ export class Posts {
     private createdAt: string,
     private updatedAt: string
   ) {}
+
+  public toDBModel():PostsDBModel{
+    return {
+      id: this.id,
+      creator_id: this.creatorId,
+      content: this.content,
+      likes: this.likes,
+      dislikes: this.dislikes,
+      created_at: this.createdAt,
+      updated_at: this.updatedAt
+    }
+  }
 }
 
 export interface PostsDBModel {
